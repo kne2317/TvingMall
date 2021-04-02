@@ -1,0 +1,15 @@
+관리자 접속방법
+localhost/TvingMall/managerStart.php
+
+관리자 로그인
+
+아이디 : 오늘날짜
+비밀번호 : 현재 시간 
+
+ex> 2020년 11월 23일 오후 5시 40분일 경우 
+id : 20201123 
+pw : 1740
+
+
+사용자 접속방법
+localhost/TvingMall/userStart.php

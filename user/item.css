@@ -1,0 +1,56 @@
+content div{
+    width: 70%;
+    margin:0 auto;
+}
+#item_img{
+    text-align: center;
+}
+#item_name{
+    font-size: 2em;
+    text-align: center;
+    margin-top:1.5em;
+    font-weight: bold;
+}
+#price_box{
+    margin:0 auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+.item_sale{
+    color: black;
+    font-weight: bold;
+    margin-right: 1em;
+}
+#buy_box{
+    margin-top: 5em;
+    background-color: rgb(241, 241, 241);
+    padding-top:1em;
+    text-align: center;
+    position: absolute;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    padding-left: 17em;
+    padding-right: 17em;
+    margin-bottom: 20em;
+}
+#buy_box div{
+    float: left;
+}
+#buy_box span{
+    text-align: center;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+.buyBtn{
+    position: relative;
+    color:white;
+    float: left;
+    width:40%;
+    text-align: center;
+    padding:1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 3em;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+		<link rel='icon' type='images/png'href='images/titleLogo.png'>
+		<title>넘버원 굿즈샵 TVING MALL - 회원가입</title>
+		<script>
+			var idck=false;
+			var pwck=false;
+
+			function submit(){
+				if(idck==true && pwck==true){
+					form.action='join.php';
+				}
+			}
+			function checkid(){
+				var userid = document.getElementById("uid").value;
+				if(userid)
+				{
+					url = "check.php?userid="+userid;
+					window.open(url,"chkid","width=300,height=200,toobar=no,menubar=no,location=no,scrollbar=no");
+					idck=true;
+				}else{
+					alert("아이디를 입력하세요");
+				}
+			}
+			function tocheckpw(){
+				var pw=document.getElementById("pw").value;
+				var pwch=document.getElementById("pwch").value;
+				if(pw!=pwch){
+					alert('비밀번호가 틀렸습니다. 다시 입력해 주세요');
+					return false;
+				}
+				if(pw==pwch){
+					alert('비밀번호가 일치합니다.');
+					pwck=true;
+					return true;
+				}
+			}
+
+		</script>
+
+		<style>
+			
+			*{
+				margin:0; padding:0; box-sizing: border-box; 
+				list-style-type: none;
+				font-family: 'Noto Sans KR',sans-serif;
+			}
+			body{
+				width: 1200px;
+				height: 100%;
+				margin:0 auto;
+				display: block;
+			}
+			form{
+				width: 30em;
+				margin: 0 auto;
+			}
+			form span{
+				display: block;
+				padding-top: 1em;
+				text-align: center;
+				font-size: 1.2em;
+				margin-bottom: 2em;
+			}
+			a{	text-decoration: none; color: black;}
+		</style>
+
+	</head>
+	<body>
+		<a href="main.php"><img src="images/mainLogo.png" width="300em" style="display: block; margin: 0 auto; margin-top: 3em;"></a>
+
+		<form method="post" action="join.php">
+
+			<span>회원가입</span>
+			<input required type="text" id="uid" name="id" placeholder="아이디" style="border: 1px solid gray; display:block; padding: 1em; margin: 0 auto; width: 25em; float: left;">
+
+			<input id="checkBtn" required type="button" name="idCheck" onclick="checkid();" value="중복확인" style="background-color: gray; display:block;color: lightgray; padding: 1em; margin: 0 auto; width: 9em; ">
+
+			<input required type="password"id="pw" name="pw" placeholder="비밀번호" style="border: 1px solid gray; display:block; padding: 1em; margin: 0 auto; width: 25em; margin-top: 2em; float: left;">
+			<input required type="password" id="pwch"name="pwCheck" placeholder="비밀번호확인" style="border: 1px solid gray; display:block; padding: 1em; margin: 0 auto; width: 25em; margin-top: 2em;float: left;">
+
+			<button required type="button" name="pwChBtn" onclick="tocheckpw();" style="background-color: gray; display:block;color: lightgray; padding: 1em; margin: 0 auto; width: 9em; margin-top: 7.5em; ">비밀번호 확인</button>
+
+			<input required type="text" name="name" placeholder="이름" style="border: 1px solid gray; display:block; padding: 1em; margin: 0 auto; width: 35em; float: left;margin-top: 2em;">
+
+
+			<input required type="text" name="e-mail" placeholder="e-mail" style="border: 1px solid gray; display:block; padding: 1em; margin: 0 auto; width: 35em; margin-top: 2em; float: left; ">
+
+			<input required type="text" name="adress" placeholder="주소" style="border: 1px solid gray; display:block; padding: 0.8em; margin: 0 auto; width:35em; margin-top: 2em; float: left;">
+
+			<p style="float: left; display: block; padding: 1em; margin-top: 1em; ">전화번호</p>
+
+			<input required type="text" name="ph_num1" style="border: 1px solid gray; display:block; padding: 0.8em; margin: 0 auto; width:7em; margin-top: 2em; float: left; margin-right: 2em; margin-left: 1em;">
+			<input required type="text" name="ph_num2" style="border: 1px solid gray; display:block; padding: 0.8em; margin: 0 auto; width:8em; margin-top: 2em; float: left; margin-right: 2em;">
+			<input required type="text" name="ph_num3" style="border: 1px solid gray; display:block; padding: 0.8em; margin: 0 auto; width:8em; margin-top: 2em; float: left; margin-bottom: 2em;">
+
+			<button type="submit" onclick="submit();"name="joinBtn" style="background-color: gray; display:block; color: lightgray; padding: 1em; margin: 0 auto; width: 35em; margin-top: 2em; ">회원가입</button>
+
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+#big_category{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    padding-left: 15em;;
+    border: 1px solid lightgray;
+}
+#nav_category{
+    float: left;
+    width: 10%;
+    margin-left: 15em;
+    font-size: 1em;
+    margin-right: 2em;
+    display: block;
+}
+#nav_category li{
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding: 1.5em 1em 1.5em 0em;
+}
+.contT2{
+    float: right;
+    width: 63% !important;
+    margin-right: 15em;
+    padding-top: 0em !important;
+    padding-right: 0em !important;
+}
+.best_rank{
+    margin: 0em 0em 1em 0.8em;
+    float: right;
+}
+.best_rank img{
+    width: 15em !important;
+}
